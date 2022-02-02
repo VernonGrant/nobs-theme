@@ -36,6 +36,7 @@
 	  (fg      "#d0ce94")
 	  (keyword "#95c779")
       (str     "#b6b861")
+	  (warning "#a94e4e")
 	  )
 
   (custom-theme-set-faces
@@ -52,8 +53,9 @@
    `(font-lock-keyword-face       ((t (:foreground ,keyword :weight bold))))
    `(font-lock-string-face        ((t (:foreground ,str))))
    `(font-lock-variable-name-face ((t (:foreground ,fg))))
+   `(font-lock-warning-face       ((t (:foreground ,warning))))
    `(fringe                       ((t (:background ,bg_dark :foreground ,fg))))
-   `(hl-line                      ((t (:background  ,bg_dark))))
+   `(hl-line                      ((t (:background ,bg_dark))))
    `(line-number                  ((t (:background ,bg_dark :foreground ,fg))))
    `(link                         ((t (:foreground ,keyword :underline t))))
    `(minibuffer-prompt            ((t (:foreground ,keyword :bold t))))

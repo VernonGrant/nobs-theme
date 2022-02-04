@@ -36,7 +36,6 @@
 	  (fg      "#d0ce94")
 	  (keyword "#95c779")
       (str     "#b6b861")
-	  (warning "#a94e4e")
 	  )
 
   (custom-theme-set-faces
@@ -52,8 +51,9 @@
    `(font-lock-function-name-face ((t (:foreground ,fg))))
    `(font-lock-keyword-face       ((t (:foreground ,keyword :weight bold))))
    `(font-lock-string-face        ((t (:foreground ,str))))
+   `(font-lock-type-face          ((t (:foreground ,keyword))))
    `(font-lock-variable-name-face ((t (:foreground ,fg))))
-   `(font-lock-warning-face       ((t (:foreground ,warning))))
+   `(font-lock-warning-face       ((t (:foreground ,fg :weight bold ))))
    `(fringe                       ((t (:background ,bg_dark :foreground ,fg))))
    `(hl-line                      ((t (:background ,bg_dark))))
    `(line-number                  ((t (:background ,bg_dark :foreground ,fg))))
@@ -62,7 +62,12 @@
    `(mode-line                    ((t (:foreground ,fg :background ,bg_dark :box (:line-width 1)))))
    `(mode-line-inactive           ((t (:foreground ,fg :background ,bg_dark))))
    `(region                       ((t (:background ,bg_dark))))
+   `(shadow                       ((t (:foreground ,comment))))
    `(vertical-border              ((t (:foreground ,fg))))
+
+   ;; Dired:
+   `(dired-header                 ((t (:foreground ,keyword))))
+   `(dired-directory              ((t (:foreground ,fg :weight bold))))
    ))
 
 ;;;###autoload

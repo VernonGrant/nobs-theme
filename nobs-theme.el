@@ -68,6 +68,9 @@
    ;; Dired:
    `(dired-header                 ((t (:foreground ,keyword))))
    `(dired-directory              ((t (:foreground ,fg :weight bold))))
+
+   ;; Completions:
+   `(compilation-info             ((t (:foreground ,keyword))))
    ))
 
 ;;;###autoload

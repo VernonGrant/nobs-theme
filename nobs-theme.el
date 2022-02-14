@@ -41,36 +41,42 @@
   (custom-theme-set-faces
    'nobs
 
-   `(cursor                       ((t (:background ,cursor :foreground, fg))))
-   `(default                      ((t (:background ,bg :foreground ,fg))))
-   `(fill-column-indicator        ((t (:foreground ,fg))))
-   `(font-lock-builtin-face       ((t (:foreground ,fg))))
-   `(font-lock-comment-face       ((t (:foreground ,comment))))
-   `(font-lock-constant-face      ((t (:foreground ,keyword))))
-   `(font-lock-doc-face           ((t (:foreground ,comment))))
-   `(font-lock-function-name-face ((t (:foreground ,fg))))
-   `(font-lock-keyword-face       ((t (:foreground ,keyword :weight bold))))
-   `(font-lock-string-face        ((t (:foreground ,str))))
-   `(font-lock-type-face          ((t (:foreground ,keyword))))
-   `(font-lock-variable-name-face ((t (:foreground ,fg))))
-   `(font-lock-warning-face       ((t (:foreground ,fg :weight bold ))))
-   `(fringe                       ((t (:background ,bg_dark :foreground ,fg))))
-   `(hl-line                      ((t (:background ,bg_dark))))
-   `(line-number                  ((t (:background ,bg_dark :foreground ,fg))))
-   `(link                         ((t (:foreground ,keyword :underline t))))
-   `(minibuffer-prompt            ((t (:foreground ,keyword :bold t))))
-   `(mode-line                    ((t (:foreground ,fg :background ,bg_dark :box (:line-width 1)))))
-   `(mode-line-inactive           ((t (:foreground ,fg :background ,bg_dark))))
-   `(region                       ((t (:background ,bg_dark))))
-   `(shadow                       ((t (:foreground ,comment))))
-   `(vertical-border              ((t (:foreground ,fg))))
+   `(cursor                         ((t (:background ,cursor :foreground, fg))))
+   `(default                        ((t (:background ,bg :foreground ,fg))))
+   `(fill-column-indicator          ((t (:foreground ,fg))))
+   `(font-lock-builtin-face         ((t (:foreground ,fg))))
+   `(font-lock-comment-face         ((t (:foreground ,comment))))
+   `(font-lock-constant-face        ((t (:foreground ,keyword))))
+   `(font-lock-doc-face             ((t (:foreground ,comment))))
+   `(font-lock-function-name-face   ((t (:foreground ,fg))))
+   `(font-lock-keyword-face         ((t (:foreground ,keyword :weight bold))))
+   `(font-lock-string-face          ((t (:foreground ,str))))
+   `(font-lock-type-face            ((t (:foreground ,keyword))))
+   `(font-lock-variable-name-face   ((t (:foreground ,fg))))
+   `(font-lock-warning-face         ((t (:foreground ,fg :weight bold ))))
+   `(fringe                         ((t (:background ,bg_dark :foreground ,fg))))
+   `(hl-line                        ((t (:background ,bg_dark))))
+   `(line-number                    ((t (:background ,bg_dark :foreground ,fg))))
+   `(link                           ((t (:foreground ,keyword :underline t))))
+   `(minibuffer-prompt              ((t (:foreground ,keyword :bold t))))
+   `(mode-line                      ((t (:foreground ,fg :background ,bg_dark :box (:line-width 1)))))
+   `(mode-line-inactive             ((t (:foreground ,fg :background ,bg_dark))))
+   `(region                         ((t (:background ,bg_dark))))
+   `(shadow                         ((t (:foreground ,comment))))
+   `(vertical-border                ((t (:foreground ,fg))))
 
    ;; Dired:
-   `(dired-header                 ((t (:foreground ,keyword))))
-   `(dired-directory              ((t (:foreground ,fg :weight bold))))
+   `(dired-header                   ((t (:foreground ,keyword))))
+   `(dired-directory                ((t (:foreground ,fg :weight bold))))
 
    ;; Completions:
-   `(compilation-info             ((t (:foreground ,keyword))))
+   `(compilation-info               ((t (:foreground ,keyword))))
+
+   ;; Web Mode:
+   `(web-mode-html-tag-bracket-face ((t (:foreground ,fg))))
+   `(web-mode-html-attr-name-face   ((t (:foreground ,fg))))
+   `(web-mode-html-tag-face         ((t (:foreground ,fg))))
+
    ))
 
 ;;;###autoload

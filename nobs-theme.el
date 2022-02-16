@@ -73,6 +73,7 @@
    `(compilation-info               ((t (:foreground ,keyword))))
 
    ;; Web Mode:
+   `(web-mode-doctype-face          ((t (:foreground ,fg))))
    `(web-mode-html-tag-bracket-face ((t (:foreground ,fg))))
    `(web-mode-html-attr-name-face   ((t (:foreground ,fg))))
    `(web-mode-html-tag-face         ((t (:foreground ,fg))))

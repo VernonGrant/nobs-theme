@@ -34,6 +34,7 @@
 	  (comment "#c58249")
 	  (cursor  "#28a719")
 	  (fg      "#d0ce94")
+	  (muted   "#4d5e5c")
 	  (keyword "#95c779")
       (str     "#b6b861")
 	  )
@@ -71,6 +72,8 @@
 
    ;; Completions:
    `(compilation-info               ((t (:foreground ,keyword))))
+   `(completions-first-difference   ((t (:foreground ,fg :weight bold))))
+   `(completions-annotations        ((t (:foreground ,muted))))
 
    ;; Web Mode:
    `(web-mode-doctype-face          ((t (:foreground ,fg))))

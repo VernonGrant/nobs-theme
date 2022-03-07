@@ -66,6 +66,11 @@
    `(shadow                         ((t (:foreground ,comment))))
    `(vertical-border                ((t (:foreground ,fg))))
 
+   ;; Org:
+   `(org-level-1                   ((t (:foreground ,keyword :bold t))))
+   `(org-level-2                   ((t (:foreground ,keyword))))
+   `(org-level-3                   ((t (:foreground ,keyword))))
+
    ;; Dired:
    `(dired-header                   ((t (:foreground ,keyword))))
    `(dired-directory                ((t (:foreground ,fg :weight bold))))

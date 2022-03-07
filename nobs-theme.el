@@ -66,11 +66,6 @@
    `(shadow                         ((t (:foreground ,comment))))
    `(vertical-border                ((t (:foreground ,fg))))
 
-   ;; Org:
-   `(org-level-1                   ((t (:foreground ,keyword :bold t))))
-   `(org-level-2                   ((t (:foreground ,keyword))))
-   `(org-level-3                   ((t (:foreground ,keyword))))
-
    ;; Dired:
    `(dired-header                   ((t (:foreground ,keyword))))
    `(dired-directory                ((t (:foreground ,fg :weight bold))))
@@ -79,6 +74,17 @@
    `(compilation-info               ((t (:foreground ,keyword))))
    `(completions-first-difference   ((t (:foreground ,fg :weight bold))))
    `(completions-annotations        ((t (:foreground ,muted))))
+
+   ;; Org Mode:
+   `(org-level-1                   ((t (:foreground ,keyword :bold t))))
+   `(org-level-2                   ((t (:foreground ,keyword))))
+   `(org-level-3                   ((t (:foreground ,keyword))))
+   `(org-todo                      ((t (:foreground ,comment :bold t))))
+   `(org-agenda-structure          ((t (:foreground ,fg))))
+   `(org-agenda-date               ((t (:foreground ,fg))))
+   `(org-agenda-date-today         ((t (:foreground ,fg :bold t))))
+   `(org-scheduled                 ((t (:foreground ,fg))))
+   `(org-scheduled-today           ((t (:foreground ,keyword))))
 
    ;; Web Mode:
    `(web-mode-doctype-face          ((t (:foreground ,fg))))

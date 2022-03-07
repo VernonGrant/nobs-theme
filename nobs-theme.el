@@ -85,6 +85,8 @@
    `(org-agenda-date-today         ((t (:foreground ,fg :bold t))))
    `(org-scheduled                 ((t (:foreground ,fg))))
    `(org-scheduled-today           ((t (:foreground ,keyword))))
+   `(org-date                      ((t (:foreground ,fg :underline t))))
+
 
    ;; Web Mode:
    `(web-mode-doctype-face          ((t (:foreground ,fg))))

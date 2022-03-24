@@ -78,7 +78,7 @@
 
    ;; Dired:
    `(dired-header                   ((t (:foreground ,keyword))))
-   `(dired-directory                ((t (:foreground ,keyword))))
+   `(dired-directory                ((t (:foreground ,fg :bold t))))
 
    ;; Completions:
    `(compilation-info               ((t (:foreground ,keyword))))

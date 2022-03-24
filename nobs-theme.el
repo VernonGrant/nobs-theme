@@ -21,17 +21,17 @@
 
 ;;; Commentary:
 
-;; A soft dark theme.
+;; A soft dark theme that performs well on light or bright display brightness settings.
 
 ;;; Code:
 
 (deftheme nobs)
 (let ((class '((class color) (min-colors 89)))
-	  (bg         "grey8")        ;; #141414
-	  (bg_darker  "grey4")        ;; #0a0a0a
-	  (bg_lighter "grey12")       ;; #0a0a0a
+	  (bg         "grey13")       ;; #212121
+	  (bg_darker  "grey11")       ;; #1c1c1c
+	  (bg_lighter "grey17")       ;; #2b2b2b
 	  (fg         "grey58")       ;; #949494
-	  (fg_muted   "grey20")       ;; #333333
+	  (fg_muted   "grey30")       ;; #333333
 	  (comment "LightSalmon4")    ;; #8b5742
 	  (cursor  "DarkGoldenrod3")  ;; #cd9b1d
 	  (keyword "DarkGoldenrod4")  ;; #8b6508
@@ -56,16 +56,21 @@
    `(fringe                         ((t (:background ,bg_darker :foreground ,fg))))
    `(hl-line                        ((t (:background ,bg_darker))))
    `(line-number                    ((t (:background ,bg_darker :foreground ,fg_muted))))
+   `(line-number-current-line       ((t (:background ,bg_lighter :foreground ,keyword))))
    `(link                           ((t (:foreground ,keyword :underline t))))
    `(minibuffer-prompt              ((t (:foreground ,keyword :bold t))))
    `(mode-line                      ((t (:foreground ,fg :background ,bg_darker))))
    `(mode-line-inactive             ((t (:foreground ,fg_muted :background ,bg_darker))))
    `(region                         ((t (:background ,bg_darker))))
    `(shadow                         ((t (:foreground ,comment))))
+   `(highlight                      ((t (:background ,bg_lighter :foreground ,cursor))))
    `(vertical-border                ((t (:foreground ,bg_darker))))
 
    ;; Parenthesis Mode:
    `(show-paren-match               ((t (:background ,bg_lighter :foreground ,cursor))))
+
+   ;; Completions
+   `(completions-common-part        ((t (:foreground ,keyword))))
 
    ;; I Search:
    `(isearch                        ((t (:background ,bg_lighter :foreground ,cursor))))
@@ -73,7 +78,7 @@
 
    ;; Dired:
    `(dired-header                   ((t (:foreground ,keyword))))
-   `(dired-directory                ((t (:foreground ,fg :weight bold))))
+   `(dired-directory                ((t (:foreground ,keyword))))
 
    ;; Completions:
    `(compilation-info               ((t (:foreground ,keyword))))
@@ -99,6 +104,36 @@
    `(web-mode-html-tag-bracket-face ((t (:foreground ,fg))))
    `(web-mode-html-attr-name-face   ((t (:foreground ,fg))))
    `(web-mode-html-tag-face         ((t (:foreground ,fg))))
+
+   ;; Company Mode:
+   `(company-tooltip                ((t (:background ,bg_darker :foreground ,fg))))
+   `(company-tooltip-annotation     ((t (:foreground ,fg_muted))))
+   `(company-tooltip-common         ((t (:background ,bg_lighter :foreground ,cursor))))
+   `(company-tooltip-selection      ((t (:background ,bg_lighter :foreground ,cursor))))
+   `(company-scrollbar-bg           ((t (:background ,bg_lighter))))
+   `(company-scrollbar-fg           ((t (:background ,cursor))))
+    ;; company-tooltip-search
+    ;; company-tooltip-search-selection
+    ;; company-tooltip-mouse
+    ;; company-preview
+    ;; company-preview-common
+    ;; company-preview-search
+    ;; company-template-field
+    ;; company-box-candidate
+
+   ;; LSP User Interface:
+   `(lsp-ui-doc-background         ((t (:background ,bg_darker))))
+   ;; lsp-ui-doc-background
+   ;; lsp-ui-peek-filename
+   ;; lsp-ui-peek-header
+   ;; lsp-ui-peek-selection
+   ;; lsp-ui-peek-list
+   ;; lsp-ui-peek-peek
+   ;; lsp-ui-peek-highlight
+   ;; lsp-ui-peek-line-number
+   ;; lsp-ui-sideline-code-action
+   ;; lsp-ui-sideline-current-symbol
+   ;; lsp-ui-sideline-symbol-info
 
    ))
 

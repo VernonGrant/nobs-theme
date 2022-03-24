@@ -1,7 +1,5 @@
 # Nobs Theme
 
-This theme is intended for vanilla Emacs users. It doesn't provide highlighting
-support for 3rd party extensions. Aside from this, it only really highlights
-strings, keywords and comments.
+A soft dark theme. Feel free to help contribute with colors for 3rd party plugins.
 
 <p align="center"><img width="960" height="540" src="./assets/screenshot.png"></p>

@@ -21,27 +21,25 @@
 
 ;;; Commentary:
 
-;; This theme is intended for vanilla Emacs users. It doesn't provide
-;; highlighting support for 3rd party extensions. Aside from this, it only
-;; really highlights strings, keywords and comments.
+;; A soft dark theme.
 
 ;;; Code:
 
 (deftheme nobs)
 (let ((class '((class color) (min-colors 89)))
-	  (bg      "#273433")
-	  (bg_dark "#1f2b2a")
-	  (comment "#c58249")
-	  (cursor  "#28a719")
-	  (fg      "#d0ce94")
-	  (muted   "#4d5e5c")
-	  (keyword "#95c779")
-      (str     "#b6b861")
+	  (bg         "grey8")        ;; #141414
+	  (bg_darker  "grey4")        ;; #0a0a0a
+	  (bg_lighter "grey12")       ;; #0a0a0a
+	  (fg         "grey58")       ;; #949494
+	  (fg_muted   "grey20")       ;; #333333
+	  (comment "LightSalmon4")    ;; #8b5742
+	  (cursor  "DarkGoldenrod3")  ;; #cd9b1d
+	  (keyword "DarkGoldenrod4")  ;; #8b6508
+      (str     "LightGoldenrod4") ;; #8b8878
 	  )
 
   (custom-theme-set-faces
    'nobs
-
    `(cursor                         ((t (:background ,cursor :foreground, fg))))
    `(default                        ((t (:background ,bg :foreground ,fg))))
    `(fill-column-indicator          ((t (:foreground ,fg))))
@@ -50,21 +48,28 @@
    `(font-lock-constant-face        ((t (:foreground ,keyword))))
    `(font-lock-doc-face             ((t (:foreground ,comment))))
    `(font-lock-function-name-face   ((t (:foreground ,fg))))
-   `(font-lock-keyword-face         ((t (:foreground ,keyword :weight bold))))
+   `(font-lock-keyword-face         ((t (:foreground ,keyword))))
    `(font-lock-string-face          ((t (:foreground ,str))))
    `(font-lock-type-face            ((t (:foreground ,keyword))))
    `(font-lock-variable-name-face   ((t (:foreground ,fg))))
    `(font-lock-warning-face         ((t (:foreground ,fg :weight bold ))))
-   `(fringe                         ((t (:background ,bg_dark :foreground ,fg))))
-   `(hl-line                        ((t (:background ,bg_dark))))
-   `(line-number                    ((t (:background ,bg_dark :foreground ,fg))))
+   `(fringe                         ((t (:background ,bg_darker :foreground ,fg))))
+   `(hl-line                        ((t (:background ,bg_darker))))
+   `(line-number                    ((t (:background ,bg_darker :foreground ,fg_muted))))
    `(link                           ((t (:foreground ,keyword :underline t))))
    `(minibuffer-prompt              ((t (:foreground ,keyword :bold t))))
-   `(mode-line                      ((t (:foreground ,fg :background ,bg_dark :box (:line-width 1)))))
-   `(mode-line-inactive             ((t (:foreground ,fg :background ,bg_dark))))
-   `(region                         ((t (:background ,bg_dark))))
+   `(mode-line                      ((t (:foreground ,fg :background ,bg_darker))))
+   `(mode-line-inactive             ((t (:foreground ,fg_muted :background ,bg_darker))))
+   `(region                         ((t (:background ,bg_darker))))
    `(shadow                         ((t (:foreground ,comment))))
-   `(vertical-border                ((t (:foreground ,fg))))
+   `(vertical-border                ((t (:foreground ,bg_darker))))
+
+   ;; Parenthesis Mode:
+   `(show-paren-match               ((t (:background ,bg_lighter :foreground ,cursor))))
+
+   ;; I Search:
+   `(isearch                        ((t (:background ,bg_lighter :foreground ,cursor))))
+   `(lazy-highlight                 ((t (:background ,cursor :foreground ,bg_darker))))
 
    ;; Dired:
    `(dired-header                   ((t (:foreground ,keyword))))
@@ -73,20 +78,21 @@
    ;; Completions:
    `(compilation-info               ((t (:foreground ,keyword))))
    `(completions-first-difference   ((t (:foreground ,fg :weight bold))))
-   `(completions-annotations        ((t (:foreground ,muted))))
+   `(completions-annotations        ((t (:foreground ,fg_muted))))
 
    ;; Org Mode:
-   `(org-level-1                   ((t (:foreground ,keyword :bold t))))
-   `(org-level-2                   ((t (:foreground ,keyword))))
-   `(org-level-3                   ((t (:foreground ,keyword))))
-   `(org-todo                      ((t (:foreground ,comment :bold t))))
-   `(org-agenda-structure          ((t (:foreground ,fg))))
-   `(org-agenda-date               ((t (:foreground ,fg))))
-   `(org-agenda-date-today         ((t (:foreground ,fg :bold t))))
-   `(org-scheduled                 ((t (:foreground ,fg))))
-   `(org-scheduled-today           ((t (:foreground ,keyword))))
-   `(org-date                      ((t (:foreground ,fg :underline t))))
-
+   `(org-level-1                    ((t (:foreground ,keyword :bold t))))
+   `(org-level-2                    ((t (:foreground ,keyword))))
+   `(org-level-3                    ((t (:foreground ,keyword))))
+   `(org-todo                       ((t (:foreground ,comment :bold t))))
+   `(org-done                       ((t (:foreground ,comment :bold t))))
+   `(org-agenda-structure           ((t (:foreground ,fg))))
+   `(org-agenda-date                ((t (:foreground ,fg))))
+   `(org-agenda-date-today          ((t (:foreground ,fg :bold t))))
+   `(org-agenda-done                ((t (:foreground ,fg_muted))))
+   `(org-scheduled                  ((t (:foreground ,fg))))
+   `(org-scheduled-today            ((t (:foreground ,fg :bold t))))
+   `(org-date                       ((t (:foreground ,fg :underline t))))
 
    ;; Web Mode:
    `(web-mode-doctype-face          ((t (:foreground ,fg))))

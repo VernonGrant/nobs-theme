@@ -87,8 +87,8 @@
 
    ;; Org Mode:
    `(org-level-1                    ((t (:foreground ,keyword :bold t))))
-   `(org-level-2                    ((t (:foreground ,keyword))))
-   `(org-level-3                    ((t (:foreground ,keyword))))
+   `(org-level-2                    ((t (:foreground ,fg))))
+   `(org-level-3                    ((t (:foreground ,fg))))
    `(org-todo                       ((t (:foreground ,comment :bold t))))
    `(org-done                       ((t (:foreground ,comment :bold t))))
    `(org-agenda-structure           ((t (:foreground ,fg))))

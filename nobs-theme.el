@@ -21,7 +21,8 @@
 
 ;;; Commentary:
 
-;; A soft dark theme that performs well on light or bright display brightness settings.
+;; A soft dark theme that's intended for HDR monitors. The theme uses a lot of
+;; mat colors to help keep things from being overly bright on HDR displays.
 
 ;;; Code:
 
@@ -89,15 +90,18 @@
    `(org-level-1                    ((t (:foreground ,keyword :bold t))))
    `(org-level-2                    ((t (:foreground ,fg))))
    `(org-level-3                    ((t (:foreground ,fg))))
-   `(org-todo                       ((t (:foreground ,comment :bold t))))
-   `(org-done                       ((t (:foreground ,comment :bold t))))
+   `(org-todo                       ((t (:foreground ,fg :bold t))))
+   `(org-done                       ((t (:foreground ,fg_muted :bold t))))
    `(org-agenda-structure           ((t (:foreground ,fg))))
    `(org-agenda-date                ((t (:foreground ,fg))))
    `(org-agenda-date-today          ((t (:foreground ,fg :bold t))))
    `(org-agenda-done                ((t (:foreground ,fg_muted))))
    `(org-scheduled                  ((t (:foreground ,fg))))
    `(org-scheduled-today            ((t (:foreground ,fg :bold t))))
-   `(org-date                       ((t (:foreground ,fg :underline t))))
+   `(org-date                       ((t (:foreground ,keyword :underline t))))
+   `(org-drawer                     ((t (:foreground ,str))))
+   `(org-special-keyword            ((t (:foreground ,str))))
+
 
    ;; Web Mode:
    `(web-mode-doctype-face          ((t (:foreground ,fg))))

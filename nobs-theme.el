@@ -24,23 +24,22 @@
 ;; A soft dark theme that's intended for HDR monitors. The theme uses a lot of
 ;; mat colors to help keep things from being overly bright on HDR displays.
 
-
 ;;; Code:
 
 (deftheme nobs)
 (let ((class '((class color) (min-colors 89)))
-	  (bg         "grey13")       ;; #212121
-	  (bg_darker  "grey11")       ;; #1c1c1c
-	  (bg_lighter "grey17")       ;; #2b2b2b
-	  (fg         "grey58")       ;; #949494
-	  (fg_darker  "grey45")       ;; #737373
-	  (fg_lighter "grey75")       ;; #bfbfbf
-	  (fg_muted   "grey30")       ;; #333333
-	  (comment "LightSalmon4")    ;; #8b5742
-	  (cursor  "DarkGoldenrod3")  ;; #cd9b1d
-	  (keyword "DarkGoldenrod4")  ;; #8b6508
-      (str     "LightGoldenrod4") ;; #8b8878
-	  (warning "tomato4")         ;; #8b3626
+	  (bg         "#394f3f")
+	  (bg_darker  "#273b2d")
+	  (bg_lighter "#3f5e48")
+	  (fg         "#eee8aa")
+	  (fg_darker  "#bdb76b")
+	  (fg_lighter "#fafad2")
+	  (fg_muted   "#698b69")
+	  (comment    "#a7cc5a")
+	  (cursor     "#f4a460")
+	  (keyword    "#cec227")
+      (str        "#d2b547")
+	  (warning    "#db6464")
 	  )
 
   (custom-theme-set-faces
@@ -73,9 +72,6 @@
    `(highlight                         ((t (:background ,bg_lighter :foreground ,cursor))))
    `(vertical-border                   ((t (:foreground ,bg_darker))))
    `(error                             ((t (:background ,bg_lighter :foreground ,warning))))
-   ;; font-lock-preprocessor-face
-   ;; font-lock-regexp-grouping-backslash
-   ;; font-lock-regexp-grouping-construct
 
    ;; Parenthesis Mode:
    `(show-paren-match                  ((t (:background ,bg_lighter :foreground ,cursor))))
@@ -108,12 +104,15 @@
    `(org-agenda-date                   ((t (:foreground ,fg))))
    `(org-agenda-date-today             ((t (:foreground ,fg :bold t))))
    `(org-agenda-done                   ((t (:foreground ,fg_muted))))
+   `(org-headline-done                 ((t (:foreground ,fg_muted))))
    `(org-scheduled                     ((t (:foreground ,fg))))
    `(org-scheduled-today               ((t (:foreground ,fg :bold t))))
    `(org-date                          ((t (:foreground ,keyword :underline t))))
    `(org-drawer                        ((t (:foreground ,str))))
    `(org-special-keyword               ((t (:foreground ,str))))
    `(org-scheduled-previously          ((t (:foreground ,warning)))) ;; Change this to proper face color.
+   `(org-document-info                 ((t (:foreground ,keyword))))
+   `(org-document-title                ((t (:foreground ,keyword))))
 
    ;; Web Mode:
    `(web-mode-doctype-face             ((t (:foreground ,fg))))
@@ -128,29 +127,9 @@
    `(company-tooltip-selection         ((t (:background ,bg_lighter :foreground ,cursor))))
    `(company-scrollbar-bg              ((t (:background ,bg_lighter))))
    `(company-scrollbar-fg              ((t (:background ,cursor))))
-    ;; company-tooltip-search
-    ;; company-tooltip-search-selection
-    ;; company-tooltip-mouse
-    ;; company-preview
-    ;; company-preview-common
-    ;; company-preview-search
-    ;; company-template-field
-    ;; company-box-candidate
 
    ;; LSP User Interface:
    `(lsp-ui-doc-background            ((t (:background ,bg_darker))))
-   ;; lsp-ui-doc-background
-   ;; lsp-ui-peek-filename
-   ;; lsp-ui-peek-header
-   ;; lsp-ui-peek-selection
-   ;; lsp-ui-peek-list
-   ;; lsp-ui-peek-peek
-   ;; lsp-ui-peek-highlight
-   ;; lsp-ui-peek-line-number
-   ;; lsp-ui-sideline-code-action
-   ;; lsp-ui-sideline-current-symbol
-   ;; lsp-ui-sideline-symbol-info
-
    ))
 
 ;;;###autoload

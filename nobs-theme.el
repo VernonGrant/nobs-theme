@@ -28,17 +28,16 @@
 
 (deftheme nobs)
 (let ((class '((class color) (min-colors 89)))
-	  (bg         "#394f3f")
-	  (bg_darker  "#273b2d")
-	  (bg_lighter "#3f5e48")
-	  (fg         "#eee8aa")
-	  (fg_darker  "#bdb76b")
-	  (fg_lighter "#fafad2")
-	  (fg_muted   "#698b69")
-	  (comment    "#a7cc5a")
-	  (cursor     "#f4a460")
-	  (keyword    "#cec227")
-      (str        "#d2b547")
+	  (bg         "#2a2c2f")
+	  (bg_darker  "#252729")
+	  (bg_lighter "#2d2f31")
+	  (fg         "#a59988")
+	  (fg_darker  "#9a8e7f")
+	  (fg_muted   "#585756")
+	  (comment    "#8b5e5e")
+	  (cursor     "#966464")
+	  (keyword    "#a17258")
+      (str        "#898e5b")
 	  (warning    "#db6464")
 	  )
 
@@ -62,9 +61,9 @@
    `(fringe                            ((t (:background ,bg_darker :foreground ,fg))))
    `(hl-line                           ((t (:background ,bg_darker))))
    `(line-number                       ((t (:background ,bg_darker :foreground ,fg_muted))))
-   `(line-number-current-line          ((t (:background ,bg_lighter :foreground ,keyword))))
+   `(line-number-current-line          ((t (:background ,bg_lighter :foreground ,cursor))))
    `(link                              ((t (:foreground ,keyword :underline t))))
-   `(minibuffer-prompt                 ((t (:foreground ,keyword :bold t))))
+   `(minibuffer-prompt                 ((t (:foreground ,cursor))))
    `(mode-line                         ((t (:foreground ,fg :background ,bg_darker))))
    `(mode-line-inactive                ((t (:foreground ,fg_muted :background ,bg_darker))))
    `(region                            ((t (:background ,bg_darker))))
@@ -77,7 +76,7 @@
    `(show-paren-match                  ((t (:background ,bg_lighter :foreground ,cursor))))
 
    ;; Completions
-   `(completions-common-part           ((t (:foreground ,keyword))))
+   `(completions-common-part           ((t (:foreground ,cursor))))
 
    ;; I Search:
    `(isearch                           ((t (:background ,bg_lighter :foreground ,cursor))))
